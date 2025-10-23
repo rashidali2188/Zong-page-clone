@@ -1,1 +1,1 @@
-# Zong-page-clone.
+# page clone
