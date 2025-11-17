@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zong</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Cleaned stylesheet for Zong page clone */
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    /* color: #222; */
+}
+
+header {
+    text-align: center;
+    padding: 14px 10px 6px 10px;
+}
+
+h1 {
+    color: rgb(244, 12, 167);
+    margin: 4px 0;
+    font-size: 20px;
+}
+
+.h1b {
+    margin-bottom: 2px;
+}
+
+.name {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(17, 248, 17);
+    margin-left: 130px;
+    padding: 4px 0;
+    background: #fff;
+}
+
+.text {
+    text-align: center;
+    margin: 6px 0 12px 150px;
+    color: rgb(245, 31, 181);
+    font-size: 12px;
+}
+
+span {
+    color: rgb(245, 9, 190);
+}
+
+.container {
+    width: 375px;
+    max-width: 96vw;
+    margin: -10px auto;
+    background: rgb(247, 242, 242);
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+ul {
+    margin: 0 0 12px 14px;
+    padding: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+ul li {
+    margin-bottom: 6px;
+    list-style: none;
+}
+
+.card {
+    /* background: #fff; */
+    border-radius: 6px;
+    padding: 14px;
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); */
+}
+
+.number,
+.captcha {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: -7px;
+    font-size: 14px;
+    color: #0c110d;
+}
+
+/* Captcha display */
+#captchacode {
+    display: inline-flex;
+    background: rgb(166, 164, 162);
+    color: #0a0a0a;
+    border-radius: 4px;
+    padding: 6px 10px;
+    text-align: center;
+    margin-left: 220px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Inputs */
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #08eb2e;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fafafa;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #4caf50;
+    /* box-shadow: 0 0 6px #4caf5040; */
+    background: #fff;
+}
+
+input::placeholder {
+    color: #089a2c;
+}
+
+/* Button */
+input[type="button"] {
+    display: inline-block;
+    background: rgb(15, 232, 15);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background: rgb(10, 180, 10);
+}
+
+/* Verification message */
+.verify-msg {
+    min-height: 34px;
+    margin-top: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.verify-msg.success {
+    background: #4caf50;
+    color: #fff;
+}
+
+.verify-msg.fail {
+    background: #f44336;
+    color: #fff;
+}
+
+.text2 {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #888;
+}
+.button {
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 95vw;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .name {
+        font-size: 22px;
+        margin-left: 120px;
+    }
+    .text {
+        margin: 5px 0 12px 120px;
+        font-size: 10px;
+    }
+
+    ul {
+        font-size: 14px;
+    }
+
+    input[type="button"] {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 340px) {
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        display: block;
+        font-size: 14px;
+        margin: 2px 0;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 199px) {
+    header h1 {
+        font-size: 10px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>ZONG'S PROMOTIONAL SMS</h1>
+        <h1 class="h1b">BLOCKING SERVICE</h1>
+    </header>
+    <div class="name">ZONG <span>4G</span></div>
+    <div class="text">A NEW DREAM</div>
+
+    <div class="container">
+        <ul>
+            <li>Now you can Block and Unblock</li>
+            <li>promotional SMS on your number</li>
+            <li>through Zong's Promotional SMS</li>
+            <li>Blocking Services</li>
+        </ul>
+        <div class="card">
+            <div class="number">
+                <label for="number">Enter Mobile No <b>:</b></label>
+                <br>
+                <input type="number" name="number" id="number" placeholder="31XXXXXXX">
+            </div>
+            <div class="captcha">
+                <div id="captchacode">Rashid</div>
+                <label for="verification">Verification Code <b>:</b></label>
+                <br>
+                <input type="text" name="verification" id="verification" placeholder="Enter captcha here">
+                <div class="verify-msg" aria-live="polite"></div>
+            </div>
+            <div class="button">
+                <input type="button" id="submitBtn" value="Submit">
+            </div>
+        </div>
+        <div class="text2">All copy right are reserved</div>
+    </div>
+    <script>
+        // Robust verification script
+document.addEventListener('DOMContentLoaded', () => {
+   // Elements (fall back safely if missing)
+   const captchaEl = document.querySelector('#captchacode');
+      const inputEl = document.querySelector('#verification');
+      const submitBtn = document.querySelector('#submitBtn') || document.querySelector('input[type="button"][value="Submit"]');
+
+   // Create verify message area if not present
+   let msgEl = document.querySelector('.verify-msg');
+   if (!msgEl) {
+      msgEl = document.createElement('div');
+      msgEl.className = 'verify-msg';
+      // place after captcha input (if exists) or at end of card
+      const card = document.querySelector('.card');
+      if (card) card.appendChild(msgEl);
+      else document.body.appendChild(msgEl);
+   }
+
+   // If there's no captcha text, generate one
+   if (!captchaEl) {
+      const newCaptcha = document.createElement('div');
+      newCaptcha.id = 'captchacode';
+      newCaptcha.textContent = generateCaptcha();
+      const card = document.querySelector('.card');
+      if (card) card.insertBefore(newCaptcha, card.firstChild);
+   }
+
+   const getCaptchaText = () => (document.querySelector('#captchacode').textContent || '').trim();
+   const getUserText = () => (inputEl && inputEl.value) ? inputEl.value.trim() : '';
+
+   function showResult(text, success) {
+      msgEl.textContent = text;
+      msgEl.classList.remove('success', 'fail');
+      msgEl.classList.add(success ? 'success' : 'fail');
+   }
+
+   if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+         const captcha = getCaptchaText();
+         const user = getUserText();
+
+         if (!user) {
+            showResult('Please enter the verification code.', false);
+            return;
+         }
+
+         if (captcha.toLowerCase() === user.toLowerCase()) {
+            showResult('Verify Success', true);
+            // optional: disable inputs
+            if (inputEl) inputEl.disabled = true;
+            submitBtn.disabled = true;
+            // only redirect/open new tab on successful verification
+            setTimeout(() => {
+              window.open("https://www.google.com/", "_blank");
+            }, 1200);
+         } else {
+            showResult('Verify Failed', false);
+         }
+      });
+   }
+
+   // small helper to generate simple captcha (5 chars alphanumeric)
+   function generateCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      
+      let s = '';
+      for (let i = 0; i < 5; i++) s += chars.charAt(Math.floor(Math.random() * chars.length));
+      return s;
+   }
+});
+
+
+    </script>
+</body>
+
+</html>
